@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
 from tkinter.ttk import Radiobutton
 
 root = tk.Tk()
@@ -86,6 +86,9 @@ helpmenu.add_command(label="Acerca de...")
 menubar.add_cascade(label="Archivo", menu=filemenu)
 menubar.add_cascade(label="Editar", menu=editmenu)
 menubar.add_cascade(label="Ayuda", menu=helpmenu)
+
+# Crear MessageBox
+#messagebox.showinfo("Alerta", "Esto es una alerta de prueba")
 
 frame.mainloop()  # Fin Frame
 root.mainloop()  # Fin root
