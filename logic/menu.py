@@ -61,5 +61,31 @@ comboExample.current(1)
 comboExample.place(x=50, y=250)
 print(comboExample.current(), comboExample.get())
 
+# Crear un Menu
+menubar = tk.Menu(root)
+root.config(menu=menubar)
+
+filemenu = tk.Menu(menubar, tearoff=0)
+filemenu.add_command(label="Nuevo")
+filemenu.add_command(label="Abrir")
+filemenu.add_command(label="Guardar")
+filemenu.add_command(label="Cerrar")
+filemenu.add_separator()
+filemenu.add_command(label="Salir", command=root.quit)
+
+editmenu = tk.Menu(menubar, tearoff=0)
+editmenu.add_command(label="Cortar")
+editmenu.add_command(label="Copiar")
+editmenu.add_command(label="Pegar")
+
+helpmenu = tk.Menu(menubar, tearoff=0)
+helpmenu.add_command(label="Ayuda")
+helpmenu.add_separator()
+helpmenu.add_command(label="Acerca de...")
+
+menubar.add_cascade(label="Archivo", menu=filemenu)
+menubar.add_cascade(label="Editar", menu=editmenu)
+menubar.add_cascade(label="Ayuda", menu=helpmenu)
+
 frame.mainloop()  # Fin Frame
 root.mainloop()  # Fin root
