@@ -88,7 +88,12 @@ menubar.add_cascade(label="Editar", menu=editmenu)
 menubar.add_cascade(label="Ayuda", menu=helpmenu)
 
 # Crear MessageBox
-#messagebox.showinfo("Alerta", "Esto es una alerta de prueba")
+# messagebox.showinfo("Alerta", "Esto es una alerta de prueba")
+
+# Crear un Dialog
+answer = messagebox.askokcancel("Dialog", "Selecciona cualquier opcion")
+
+
 
 frame.mainloop()  # Fin Frame
 root.mainloop()  # Fin root
