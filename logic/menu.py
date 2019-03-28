@@ -20,24 +20,35 @@ entry.place(x=50, y=50)
 
 # Crear campo Text
 
-
 # Crear un Boton
-button = ttk.Button(root, text = "Boton")
+button = ttk.Button(root, text="Boton")
 button.place(x=50, y=100)
 
 # Crear Radio Button
 var = tk.IntVar()
 R1 = Radiobutton(root, text="Option 1", variable=var, value=1)
-R1.pack(anchor =tk.W)
+R1.pack(anchor=tk.W)
 R1.place(x=50, y=150)
 
 R2 = Radiobutton(root, text="Option 2", variable=var, value=2)
-R2.pack(anchor =tk.W)
+R2.pack(anchor=tk.W)
 R2.place(x=50, y=170)
 
 R3 = Radiobutton(root, text="Option 3", variable=var, value=3)
-R3.pack(anchor =tk.W)
+R3.pack(anchor=tk.W)
 R3.place(x=50, y=190)
+
+# Crear CheckButton
+CheckVar1 = tk.IntVar()
+CheckVar2 = tk.IntVar()
+C1 = tk.Checkbutton(root, text="Check 1", variable=CheckVar1, onvalue=1, offvalue=0, height=5, width=20)
+C1.pack()
+C1.place(x=150, y=100)
+C2 = tk.Checkbutton(root, text="check 2", variable=CheckVar2, onvalue=1, offvalue=0, height=5, width=20)
+C2.pack()
+C2.place(x=150, y=150)
+
+
 
 frame.mainloop()  # Fin Frame
 root.mainloop()  # Fin root
