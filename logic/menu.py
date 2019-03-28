@@ -93,7 +93,10 @@ menubar.add_cascade(label="Ayuda", menu=helpmenu)
 # Crear un Dialog
 answer = messagebox.askokcancel("Dialog", "Selecciona cualquier opcion")
 
-
+# Crear un Spinbox
+spinner = ttk.Spinbox(root, from_=0, to=100)
+spinner.pack()
+spinner.place(x=50, y=300)
 
 frame.mainloop()  # Fin Frame
 root.mainloop()  # Fin root
