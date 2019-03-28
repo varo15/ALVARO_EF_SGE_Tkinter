@@ -88,13 +88,13 @@ menubar.add_cascade(label="Editar", menu=editmenu)
 menubar.add_cascade(label="Ayuda", menu=helpmenu)
 
 # Crear MessageBox
-# messagebox.showinfo("Alerta", "Esto es una alerta de prueba")
+messagebox.showinfo("Alerta", "Esto es una alerta de prueba")
 
 # Crear un Dialog
 answer = messagebox.askokcancel("Dialog", "Selecciona cualquier opcion")
 
 # Crear un Spinbox
-spinner = ttk.Spinbox(root, from_=0, to=100)
+spinner = tk.Spinbox(root, from_=0, to=20)
 spinner.pack()
 spinner.place(x=50, y=300)
 
