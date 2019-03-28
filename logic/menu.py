@@ -48,7 +48,18 @@ C2 = tk.Checkbutton(root, text="check 2", variable=CheckVar2, onvalue=1, offvalu
 C2.pack()
 C2.place(x=150, y=150)
 
-
+# Crear ComboBox
+comboExample = ttk.Combobox(root,
+                            values=[
+                                "Enero",
+                                "Febrero",
+                                "Marzo",
+                                "Abril"])
+print(dict(comboExample))
+comboExample.grid(column=0, row=1)
+comboExample.current(1)
+comboExample.place(x=50, y=250)
+print(comboExample.current(), comboExample.get())
 
 frame.mainloop()  # Fin Frame
 root.mainloop()  # Fin root
